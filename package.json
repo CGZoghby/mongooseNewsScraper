@@ -1,0 +1,27 @@
+{
+  "name": "mongoosenewsscraper",
+  "version": "1.0.0",
+  "description": "App for scraping and commenting on news",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CGZoghby/mongooseNewsScraper.git"
+  },
+  "author": "Christopher Zoghby",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CGZoghby/mongooseNewsScraper/issues"
+  },
+  "homepage": "https://github.com/CGZoghby/mongooseNewsScraper#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cheerio": "^1.0.0-rc.2",
+    "express": "^4.16.3",
+    "express-handlebars": "^3.0.0",
+    "mongoose": "^5.1.3",
+    "request": "^2.87.0"
+  }
+}
