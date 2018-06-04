@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="jumbotron text-center">
+        <h1 class="display-4">Cracked Scraper!</h1>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                    Grabbed Articles
+                </div>
+                <div class="card-body">
+                    <div class="list-group">
+                        {{#each articles}}
+                        <a href="{{this.link}}" class="list-group-item list-group-item-action">
+                            {{this.title}}</a>
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
