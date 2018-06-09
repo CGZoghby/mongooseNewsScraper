@@ -1,22 +1,54 @@
+{{!-- So want to display a navbar, jumbotron with picture, and then each article gets it's own row, which has options to
+add notes on the RHS of it's little row. --}} {{!-- Navbar has options to select a saved articles page, where you can add/delete
+notes ONLY FROM SAVED ARTICLES --}}
+
 <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-inverse">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">Home
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Saved Articles</a>
+                </li>
+                <li class="nav-item">
+                    <button class="btn btn-danger" id="articleScrape">Scrape New Articles</button>
+                </li>
+            </ul>
+        </div>
+    </nav>
     <div class="jumbotron text-center">
         <h1 class="display-4">Cracked Scraper!</h1>
     </div>
     <div class="row">
         <div class="col-md-12">
+            {{#each articles}}
             <div class="card">
                 <div class="card-header">
-                    Grabbed Articles
+                    <h3>
+                        <a href="{{this.link}}" data-id="{{this.id}}">
+                            {{this.title}}</a>
+                        <a class="btn btn-success saveNote">Save Article</a>
+                    </h3>
                 </div>
                 <div class="card-body">
                     <div class="list-group">
-                        {{#each articles}}
-                        <a href="{{this.link}}" class="list-group-item list-group-item-action">
-                            {{this.title}}</a>
-                        {{/each}}
+                        <h4>
+                            Article placeholder text
+                        </h4>
                     </div>
                 </div>
             </div>
+            <br>
+            {{/each}}
         </div>
     </div>
 </div>
